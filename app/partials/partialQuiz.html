@@ -1,0 +1,30 @@
+	<div class="row text-center">
+			<h2>Welcome to the ngWorld!</h2>
+			<p>You are all set now!</p>
+	</div> <!-- End of mantle piece -->
+    <div class="row" ng-controller="quizController">
+          <div class="col-md-6 col-md-offset-3">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Question: {{idx+1}} of {{quest.length}} <br><br><pre>{{quest[idx].question}}{{quest[idx].details}}</pre></h3>
+                  
+                </div>
+                <div class="panel-body">
+                      <form ng-submit="scores()" name="quiz" id="quiz">
+                        <div ng-repeat="choice in quest[idx].choices" class="radio">
+                            <input required
+                                type="radio" 
+                                name="_id{{idx}}" 
+                                id="_id{{idx}}"
+                                value="{{$index}}"
+                                ng-model="scoreCard[idx]"/>
+                            <label for="_id{{idx}}">{{choice}}</label>           
+                        </div>
+                        <button class="btn btn-primary"  ng-init="idx=7" ng-click="idx=idx+1" ng-hide="!quest[idx+1].question">Next</button>
+                        <button class="btn btn-success" type="submit" ng-show="idx+1>=quest.length">Scores</button>
+                      </form>
+                </div>
+                <div class="panel-footer"><h4>Final score: {{(finalScore/quest.length)*100}}%</h4></div>         
+              </div>        
+          </div>
+    </div> <!-- End of quiz-controller -->
