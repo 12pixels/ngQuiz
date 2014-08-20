@@ -1,18 +1,15 @@
-# angular-seed — the seed for AngularJS apps
+# ngQuiz built on angular-seed — the seed for AngularJS apps
 
-This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
-You can use it to quickly bootstrap your angular webapp projects and dev environment for these
-projects.
+The ngQuiz is a demonstrational project built using angular-seed scaffolding project. 
+
 
 The seed contains a sample AngularJS application and is preconfigured to install the Angular
 framework and a bunch of development and testing tools for instant web development gratification.
 
-The seed app doesn't do much, just shows how to wire two controllers and views together.
-
 
 ## Getting Started
 
-To get you started you can simply clone the angular-seed repository and install the dependencies:
+To get you started you can simply clone this repository and install the dependencies:
 
 ### Prerequisites
 
@@ -27,8 +24,8 @@ its package manager (npm) installed.  You can get them from [http://nodejs.org/]
 Clone the angular-seed repository using [git][git]:
 
 ```
-git clone https://github.com/angular/angular-seed.git
-cd angular-seed
+git clone https://github.com/12pixels/ngQuiz.git
+cd ngQuiz 
 ```
 
 ### Install Dependencies
@@ -83,8 +80,9 @@ Now browse to the app at `http://localhost:8000/app/index.html`.
         filters.js      --> custom angular filters
         services.js     --> custom angular services
       partials/             --> angular view partials (partial html templates)
-        partial1.html
-        partial2.html
+        partialLogin.html
+        partialRegister.html
+        partialQuiz.html
 
     test/               --> test config and source files
       protractor-conf.js    --> config file for running e2e tests with Protractor
